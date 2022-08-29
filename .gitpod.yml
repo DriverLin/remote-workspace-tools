@@ -1,0 +1,11 @@
+# Commands to start on workspace startup
+tasks:
+  - name: install wstunnel
+    init: wget https://github.com/erebe/wstunnel/releases/latest/download/wstunnel-x64-linux -o wstunnel
+    command: wstunnel --server ws://0.0.0.0:8080
+  
+  - name: install rclone
+    init: sudo apt-get install rclone
+    command: rclone config file 
+
+# Ports to expose on workspace startup
